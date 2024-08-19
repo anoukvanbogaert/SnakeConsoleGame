@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace SnakeConsoleGame
@@ -12,6 +13,8 @@ namespace SnakeConsoleGame
         static int headX, headY;
         static int velocityX = 0, velocityY = 0;
         static char[,] grid = new char[width, height];
+        static List<Tuple<int, int>> snake = new List<Tuple<int, int>>(); //stores coordinates of each part of the snake's body
+
 
         static void Main(string[] args)
         {
@@ -23,7 +26,7 @@ namespace SnakeConsoleGame
                 DrawGrid();
                 Input();
                 Logic();
-                Thread.Sleep(100); // Control the game speed
+                Thread.Sleep(80);
             }
         }
 
@@ -31,6 +34,7 @@ namespace SnakeConsoleGame
         {
             headX = width / 2;
             headY = height / 2;
+            snake.Add(Tuple.Create(headX, headY)); 
             SpawnFood();
         }
 
@@ -43,7 +47,9 @@ namespace SnakeConsoleGame
                 for (int j = 0; j < width; j++)
                 {
                     if (i == headY && j == headX)
-                        Console.Write("O");
+                      Console.Write("O");
+                    else if (IsSnakeSegment(j, i))
+                        Console.Write("o");
                     else if (i == foodY && j == foodX)
                         Console.Write("*");
                     else
@@ -53,6 +59,16 @@ namespace SnakeConsoleGame
             }
 
             Console.WriteLine($"Score: {score}");
+        }
+
+              static bool IsSnakeSegment(int x, int y)
+        {
+            foreach (var segment in snake)
+            {
+                if (segment.Item1 == x && segment.Item2 == y)
+                    return true;
+            }
+            return false;
         }
 
         static void Input()
@@ -85,6 +101,10 @@ namespace SnakeConsoleGame
 
         static void Logic()
         {
+
+          int prevX = headX;
+            int prevY = headY;
+
             headX += velocityX;
             headY += velocityY;
 
@@ -97,7 +117,17 @@ namespace SnakeConsoleGame
             {
                 score++;
                 SpawnFood();
+                snake.Add(Tuple.Create(prevX, prevY));
             }
+
+            // move the snake's body
+            for (int i = snake.Count - 1; i > 0; i--)
+            {
+                snake[i] = snake[i - 1];
+            }
+
+            if (snake.Count > 0)
+                snake[0] = Tuple.Create(headX, headY);
         }
 
         static void SpawnFood()
