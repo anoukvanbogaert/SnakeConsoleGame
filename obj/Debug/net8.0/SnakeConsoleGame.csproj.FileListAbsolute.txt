@@ -1,0 +1,14 @@
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/bin/Debug/net8.0/SnakeConsoleGame
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/bin/Debug/net8.0/SnakeConsoleGame.deps.json
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/bin/Debug/net8.0/SnakeConsoleGame.runtimeconfig.json
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/bin/Debug/net8.0/SnakeConsoleGame.dll
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/bin/Debug/net8.0/SnakeConsoleGame.pdb
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.AssemblyInfoInputs.cache
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.AssemblyInfo.cs
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.csproj.CoreCompileInputs.cache
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.dll
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/refint/SnakeConsoleGame.dll
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.pdb
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/SnakeConsoleGame.genruntimeconfig.cache
+/Users/anoukvanbogaert/lighthouse/2023/SnakeConsoleGame/obj/Debug/net8.0/ref/SnakeConsoleGame.dll
