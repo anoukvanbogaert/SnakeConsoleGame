@@ -41,6 +41,7 @@ namespace SnakeConsoleGame
         static void DrawGrid()
         {
             Console.Clear();
+            //
 
             for (int i = 0; i < height; i++)
             {
