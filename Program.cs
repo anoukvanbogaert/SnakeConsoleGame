@@ -26,8 +26,28 @@ namespace SnakeConsoleGame
                 DrawGrid();
                 Input();
                 Logic();
+                if (CheckGameOver()) 
+                {
+                    break; 
+                }
                 Thread.Sleep(80);
             }
+
+            Console.Clear();
+            Console.WriteLine("Game Over! Press any key to exit...");
+            Console.ReadKey();
+        }
+
+        static bool CheckGameOver()
+        {
+          for (int i = 1; i < snake.Count; i++)
+          {
+            if (headX == snake[i].Item1 && headY == snake[i].Item2)
+            {
+                return true;
+            }
+          }
+          return false;
         }
 
         static void InitializeGame()
@@ -41,7 +61,8 @@ namespace SnakeConsoleGame
         static void DrawGrid()
         {
             Console.Clear();
-            //
+            //top border
+            Console.WriteLine(new string('-', width + 2));
 
             for (int i = 0; i < height; i++)
             {
@@ -58,6 +79,9 @@ namespace SnakeConsoleGame
                 }
                 Console.WriteLine();
             }
+
+            //bottom border
+            Console.WriteLine(new string('-', width + 2));
 
             Console.WriteLine($"Score: {score}");
         }
